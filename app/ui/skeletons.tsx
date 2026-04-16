@@ -29,6 +29,21 @@ export function CardsSkeleton() {
   );
 }
 
+/** 与 `app/ui/search.tsx` 中输入框布局一致：全宽、圆角边框、左侧预留放大镜区域 */
+export function SearchSkeleton() {
+  return (
+    <div className="relative flex flex-1 flex-shrink-0">
+      <div
+        aria-hidden
+        className={`${shimmer} relative block w-full overflow-hidden rounded-md border border-gray-200 bg-white py-[9px] pl-10 pr-3`}
+      >
+        <div className="absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 rounded-sm bg-gray-200" />
+        <div className="h-3.5 max-w-[70%] rounded-md bg-gray-200" />
+      </div>
+    </div>
+  );
+}
+
 export function RevenueChartSkeleton() {
   return (
     <div className={`${shimmer} relative w-full overflow-hidden md:col-span-4`}>
