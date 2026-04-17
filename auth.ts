@@ -21,7 +21,7 @@ async function getUser(email: string): Promise<User | undefined> {
 }
 
 // auth() = 在服务端读取当前请求对应的 session/user
-export const { auth, signIn, signOut } = NextAuth({
+export const { handlers, auth, signIn, signOut } = NextAuth({
     ...authConfig,
     providers: [
         Credentials({
